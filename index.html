@@ -9,74 +9,27 @@
 <body>
         <div class="page">
             <header class="site-header">
-                <h1 class="site-title">MovieManiac</h1>
-
-                <nav class="site-nav" aria-label="Main navigation">
-                    <div class="nav-inner">
-                        <button>Home</button>
-                        <button>Browse</button>
-                        <button>Favorites</button>
-                    </div>
-                </nav>
-
-                <div class="search-wrap">
-                    <input class="search" type="search" placeholder="Search movies..." aria-label="Search movies" />
+                <div class="header-row">
+                    <h1 class="site-title">MovieManic</h1>
+                    <nav class="site-nav" aria-label="Main navigation">
+                        <div class="nav-inner">
+                            <a href="#">about</a>
+                        </div>
+                        <form class="search-wrap" role="search">
+                            <input class="search" type="search" placeholder="search for a movie..." aria-label="Search movies" />
+                        </form>
+                    </nav>
                 </div>
             </header>
 
             <main class="content">
-                <section class="movie-grid">
-                    <article class="card">
-                        <div class="poster"><div class="poster-inner"></div></div>
-                        <h3 class="movie-title"></h3>
-                        <p class="movie-details"></p>
-                    </article>
-
-                    <article class="card">
-                        <div class="poster"><div class="poster-inner"></div></div>
-                        <h3 class="movie-title"></h3>
-                        <p class="movie-details"></p>
-                    </article>
-
-                    <article class="card">
-                        <div class="poster"><div class="poster-inner"></div></div>
-                        <h3 class="movie-title"></h3>
-                        <p class="movie-details"></p>
-                    </article>
-
-                    <article class="card">
-                        <div class="poster"><div class="poster-inner"></div></div>
-                        <h3 class="movie-title"></h3>
-                        <p class="movie-details"></p>
-                    </article>
-
-                    <article class="card">
-                        <div class="poster"><div class="poster-inner"></div></div>
-                        <h3 class="movie-title"></h3>
-                        <p class="movie-details"></p>
-                    </article>
-
-                    <article class="card">
-                        <div class="poster"><div class="poster-inner"></div></div>
-                        <h3 class="movie-title"></h3>
-                        <p class="movie-details"></p>
-                    </article>
-
-                    <article class="card">
-                        <div class="poster"><div class="poster-inner"></div></div>
-                        <h3 class="movie-title"></h3>
-                        <p class="movie-details"></p>
-                    </article>
-
-                    <article class="card">
-                        <div class="poster"><div class="poster-inner"></div></div>
-                        <h3 class="movie-title"></h3>
-                        <p class="movie-details"></p>
-                    </article>
-                </section>
+                <p class="top-section-title">Top Movie Picks</p>
+                <section class="movie-grid"></section>
+                <p class="top-section-title">Top TV Shows</p>
+                <section class="tv-grid"></section>
             </main>
 
-            <footer class="site-footer">Footer</footer>
+            <footer class="site-footer">Copyright © 2025 MovieManic</footer>
         </div>
         <script src="main.js"></script>
     </body>

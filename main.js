@@ -164,4 +164,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Theme toggle (light mode) — persists to localStorage
+function applyTheme(theme) {
+    if (theme === 'light') {
+        document.body.classList.add('light-mode');
+    } else {
+        document.body.classList.remove('light-mode');
+    }
+    const btn = document.getElementById('theme-toggle');
+    if (btn) {
+        const isLight = theme === 'light';
+        btn.setAttribute('aria-pressed', String(isLight));
+        btn.innerHTML = isLight ? '<i class="fa-solid fa-moon" aria-hidden="true"></i>' : '<i class="fa-solid fa-sun" aria-hidden="true"></i>';
+        btn.title = isLight ? 'Switch to dark mode' : 'Switch to light mode';
+    }
+}
+
+function initThemeToggle() {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    const saved = localStorage.getItem('mm_theme') || 'dark';
+    applyTheme(saved);
+    btn.addEventListener('click', () => {
+        const current = document.body.classList.contains('light-mode') ? 'light' : 'dark';
+        const next = current === 'light' ? 'dark' : 'light';
+        applyTheme(next);
+        localStorage.setItem('mm_theme', next);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', initThemeToggle);
+
 
